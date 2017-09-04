@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="app">
+
+			<input type="text" v-model="userInput">
+			<button onclick="">Search</button>
+			<p v-show="userInput" v-text="userInput"></p>
+			<p>{{message}}</p>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+				userInput: '',
+				check: false
+				message:
+				}
+			});
+		</script>
+	</body>
+</html>
