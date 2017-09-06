@@ -8,10 +8,8 @@
 	<body>
 		<div id="app">
 
-			<input type="text" v-model="userInput">
-			<button onclick="">Search</button>
-			<p v-show="userInput" v-text="userInput"></p>
-			<p>{{message}}</p>
+			<input type="text" v-model="userInput" >
+			<a v-bind:href="'https://www.google.is/search?q='+userInput" v-bind:style="{ color: activeColor }">Your Search</a>
 		</div>
 		<script src="https://unpkg.com/vue"></script>
 		<script type="text/javascript">
@@ -19,8 +17,8 @@
 				el: '#app',
 				data: {
 				userInput: '',
-				check: false
-				message:
+				activeColor: '' ? 'red' : 'black',
+
 				}
 			});
 		</script>
