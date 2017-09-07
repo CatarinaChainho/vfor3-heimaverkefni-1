@@ -18,11 +18,13 @@
 		</style>
 	</head>
 	<body>
-		<form action="https://www.google.is/search">
-			<input type="text" v-model="userInput">
-			<input type="hidden" v-model="userInput" name="q">
-			<button type="submit">Submit</button>
-		</form>
+		<div id="app">
+			<form action="https://www.google.is/search">
+				<input type="text" v-model="userInput">
+				<input type="hidden" v-model="userInput" name="q">
+				<button type="submit">Submit</button>
+			</form>
+		</div>
 		<script src="https://unpkg.com/vue"></script>
 		<script type="text/javascript">
 			var app = new Vue({
