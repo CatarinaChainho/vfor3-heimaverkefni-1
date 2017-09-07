@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
 		<title></title>
 		<style>
-			a {
-				text-decoration: none;
-			}
 			input {
-				height: 75px;
-				font-size: 24px;
 				border-bottom: 2px solid;
 				border-color: #D3D3D3;
 			}
 			input:focus {
 				border-bottom-color: #ff6347;
 			}
+			button{
+				color: white;
+				background-color: #1e90ff;
+				border: none;
+			}
 		</style>
 	</head>
 	<body>
-		<div id="app">
-
+		<form action="https://www.google.is/search">
 			<input type="text" v-model="userInput">
-			<a v-bind:href="'https://www.google.is/search?q='+userInput" v-bind:style="userInput ? 'color: #ff6347;':'color:black;'">Your Search</a>
-		</div>
+			<input type="hidden" v-model="userInput" name="q">
+			<button type="submit">Submit</button>
+		</form>
 		<script src="https://unpkg.com/vue"></script>
 		<script type="text/javascript">
 			var app = new Vue({
